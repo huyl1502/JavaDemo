@@ -1,0 +1,11 @@
+server:
+  port: 5000
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://172.29.97.248:9000/realms/test-realm
+  data:
+    mongodb:
+      uri: mongodb://huylq:h150201H@172.29.97.248:27017,172.29.97.248:27018,172.29.97.248:27019/java_demo?replicaSet=rs0&authSource=admin&retryWrites=true&w=majority
