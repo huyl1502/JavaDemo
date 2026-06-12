@@ -1284,3 +1284,689 @@ Caused by: java.lang.ClassNotFoundException: com.example.java_demo.repository.in
                 o.a.c.util.SessionIdGeneratorBase
                 []
                 - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [156] milliseconds.
+2026-06-12 14:17:03.142
+                INFO 
+                [File Watcher]
+                o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener
+                []
+                - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-12 14:17:03.142
+                INFO 
+                [Thread-1]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-12 14:17:03.152
+                INFO 
+                [tomcat-shutdown]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Pausing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:03.760
+                INFO 
+                [tomcat-shutdown]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Graceful shutdown complete
+2026-06-12 14:17:03.760
+                INFO 
+                [Thread-1]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Stopping ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:03.937
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Starting JavaDemoApplication using Java 17.0.12 with PID 8084 (C:\Users\Admin\source\repos\java_demo\api\target\classes started by Admin in C:\Users\Admin\source\repos\java_demo)
+2026-06-12 14:17:03.937
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-12 14:17:04.286
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-06-12 14:17:04.306
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+2026-06-12 14:17:04.451
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat initialized with port 5000 (http)
+2026-06-12 14:17:04.453
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Initializing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:04.453
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Starting service [Tomcat]
+2026-06-12 14:17:04.453
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardEngine
+                []
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-12 14:17:04.480
+                INFO 
+                [restartedMain]
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                []
+                - Root WebApplicationContext: initialization completed in 540 ms
+2026-06-12 14:17:04.524
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27017 to client view of cluster
+2026-06-12 14:17:04.524
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27018 to client view of cluster
+2026-06-12 14:17:04.524
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27019 to client view of cluster
+2026-06-12 14:17:04.529
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.client
+                []
+                - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='huylq', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@44cb3179, com.mongodb.Jep395RecordCodecProvider@396dc90b, com.mongodb.KotlinCodecProvider@2ad316bd, EnumCodecProvider{}]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@636f699]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[172.29.97.248:27017, 172.29.97.248:27018, 172.29.97.248:27019], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='rs0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-06-12 14:17:04.531
+                INFO 
+                [cluster-ClusterId{value='6a2bb270014fc6cff7eba7fd', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27018, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1587900, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27018, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=7fffffff000000000000003e, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae644daaeb2bf681fa8e, counter=5}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103841919159100}
+2026-06-12 14:17:04.532
+                INFO 
+                [cluster-ClusterId{value='6a2bb270014fc6cff7eba7fd', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Discovered replica set primary 172.29.97.248:27018 with max election id 7fffffff000000000000003e and max set version 148570
+2026-06-12 14:17:04.532
+                INFO 
+                [cluster-ClusterId{value='6a2bb270014fc6cff7eba7fd', description='null'}-172.29.97.248:27017]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1683700, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27017, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae64aeff62be2b5bac7b, counter=3}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103841919254500}
+2026-06-12 14:17:04.532
+                INFO 
+                [cluster-ClusterId{value='6a2bb270014fc6cff7eba7fd', description='null'}-172.29.97.248:27019]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27019, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2719200, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27019, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae6434dc83e966ea9e0e, counter=3}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103841920385400}
+2026-06-12 14:17:04.711
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Starting ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:04.727
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat started on port 5000 (http) with context path '/'
+2026-06-12 14:17:04.727
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Started JavaDemoApplication in 0.839 seconds (process running for 328.453)
+2026-06-12 14:17:04.727
+                INFO 
+                [restartedMain]
+                o.s.b.d.a.ConditionEvaluationDeltaLoggingListener
+                []
+                - Condition evaluation unchanged
+2026-06-12 14:17:06.157
+                INFO 
+                [File Watcher]
+                o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener
+                []
+                - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-12 14:17:06.157
+                INFO 
+                [Thread-5]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-12 14:17:06.157
+                INFO 
+                [tomcat-shutdown]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Pausing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:06.818
+                INFO 
+                [tomcat-shutdown]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Graceful shutdown complete
+2026-06-12 14:17:06.818
+                INFO 
+                [Thread-5]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Stopping ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:06.948
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Starting JavaDemoApplication using Java 17.0.12 with PID 8084 (C:\Users\Admin\source\repos\java_demo\api\target\classes started by Admin in C:\Users\Admin\source\repos\java_demo)
+2026-06-12 14:17:06.948
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-12 14:17:07.208
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-06-12 14:17:07.211
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Finished Spring Data repository scanning in 4 ms. Found 0 MongoDB repository interfaces.
+2026-06-12 14:17:07.320
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat initialized with port 5000 (http)
+2026-06-12 14:17:07.320
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Initializing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:07.320
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Starting service [Tomcat]
+2026-06-12 14:17:07.320
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardEngine
+                []
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-12 14:17:07.351
+                INFO 
+                [restartedMain]
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                []
+                - Root WebApplicationContext: initialization completed in 400 ms
+2026-06-12 14:17:07.381
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27017 to client view of cluster
+2026-06-12 14:17:07.381
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27018 to client view of cluster
+2026-06-12 14:17:07.381
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27019 to client view of cluster
+2026-06-12 14:17:07.381
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.client
+                []
+                - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='huylq', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@44cb3179, com.mongodb.Jep395RecordCodecProvider@396dc90b, com.mongodb.KotlinCodecProvider@2ad316bd, EnumCodecProvider{}]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@5605ef8f]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[172.29.97.248:27017, 172.29.97.248:27018, 172.29.97.248:27019], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='rs0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-06-12 14:17:07.388
+                INFO 
+                [cluster-ClusterId{value='6a2bb273014fc6cff7eba7fe', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27018, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1428900, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27018, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=7fffffff000000000000003e, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae644daaeb2bf681fa8e, counter=5}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103844776270100}
+2026-06-12 14:17:07.388
+                INFO 
+                [cluster-ClusterId{value='6a2bb273014fc6cff7eba7fe', description='null'}-172.29.97.248:27019]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27019, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1303500, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27019, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae6434dc83e966ea9e0e, counter=3}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103844776270000}
+2026-06-12 14:17:07.388
+                INFO 
+                [cluster-ClusterId{value='6a2bb273014fc6cff7eba7fe', description='null'}-172.29.97.248:27017]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1441400, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27017, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae64aeff62be2b5bac7b, counter=3}, lastWriteDate=Fri Jun 12 14:16:59 GMT+07:00 2026, lastUpdateTimeNanos=103844776270000}
+2026-06-12 14:17:07.388
+                INFO 
+                [cluster-ClusterId{value='6a2bb273014fc6cff7eba7fe', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Discovered replica set primary 172.29.97.248:27018 with max election id 7fffffff000000000000003e and max set version 148570
+2026-06-12 14:17:07.517
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Starting ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:07.517
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat started on port 5000 (http) with context path '/'
+2026-06-12 14:17:07.526
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Started JavaDemoApplication in 0.618 seconds (process running for 331.248)
+2026-06-12 14:17:07.526
+                INFO 
+                [restartedMain]
+                o.s.b.d.a.ConditionEvaluationDeltaLoggingListener
+                []
+                - Condition evaluation unchanged
+2026-06-12 14:17:08.967
+                INFO 
+                [File Watcher]
+                o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener
+                []
+                - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-12 14:17:08.967
+                INFO 
+                [Thread-9]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-12 14:17:08.967
+                INFO 
+                [tomcat-shutdown]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Pausing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:09.616
+                INFO 
+                [tomcat-shutdown]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Graceful shutdown complete
+2026-06-12 14:17:09.616
+                INFO 
+                [Thread-9]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Stopping ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:09.763
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Starting JavaDemoApplication using Java 17.0.12 with PID 8084 (C:\Users\Admin\source\repos\java_demo\api\target\classes started by Admin in C:\Users\Admin\source\repos\java_demo)
+2026-06-12 14:17:09.763
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-12 14:17:10.005
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-06-12 14:17:10.017
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2026-06-12 14:17:10.129
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat initialized with port 5000 (http)
+2026-06-12 14:17:10.129
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Initializing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:10.129
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Starting service [Tomcat]
+2026-06-12 14:17:10.129
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardEngine
+                []
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-12 14:17:10.154
+                INFO 
+                [restartedMain]
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                []
+                - Root WebApplicationContext: initialization completed in 391 ms
+2026-06-12 14:17:10.185
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27017 to client view of cluster
+2026-06-12 14:17:10.186
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27018 to client view of cluster
+2026-06-12 14:17:10.186
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.cluster
+                []
+                - Adding discovered server 172.29.97.248:27019 to client view of cluster
+2026-06-12 14:17:10.187
+                INFO 
+                [restartedMain]
+                org.mongodb.driver.client
+                []
+                - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='huylq', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@44cb3179, com.mongodb.Jep395RecordCodecProvider@396dc90b, com.mongodb.KotlinCodecProvider@2ad316bd, EnumCodecProvider{}]}, ProvidersCodecRegistry{codecProviders=[org.bson.codecs.pojo.PojoCodecProvider@ca5e8d2]}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[172.29.97.248:27017, 172.29.97.248:27018, 172.29.97.248:27019], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='rs0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-06-12 14:17:10.189
+                INFO 
+                [cluster-ClusterId{value='6a2bb276014fc6cff7eba7ff', description='null'}-172.29.97.248:27017]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1502900, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27017, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae64aeff62be2b5bac7b, counter=3}, lastWriteDate=Fri Jun 12 14:17:09 GMT+07:00 2026, lastUpdateTimeNanos=103847576438300}
+2026-06-12 14:17:10.189
+                INFO 
+                [cluster-ClusterId{value='6a2bb276014fc6cff7eba7ff', description='null'}-172.29.97.248:27019]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27019, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=960800, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27019, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=null, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae6434dc83e966ea9e0e, counter=3}, lastWriteDate=Fri Jun 12 14:17:09 GMT+07:00 2026, lastUpdateTimeNanos=103847576543500}
+2026-06-12 14:17:10.189
+                INFO 
+                [cluster-ClusterId{value='6a2bb276014fc6cff7eba7ff', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Monitor thread successfully connected to server with description ServerDescription{address=172.29.97.248:27018, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1042800, minRoundTripTimeNanos=0, setName='rs0', canonicalAddress=172.29.97.248:27018, hosts=[172.29.97.248:27019, 172.29.97.248:27018, 172.29.97.248:27017], passives=[], arbiters=[], primary='172.29.97.248:27018', tagSet=TagSet{[]}, electionId=7fffffff000000000000003e, setVersion=148570, topologyVersion=TopologyVersion{processId=6a2bae644daaeb2bf681fa8e, counter=5}, lastWriteDate=Fri Jun 12 14:17:09 GMT+07:00 2026, lastUpdateTimeNanos=103847576533600}
+2026-06-12 14:17:10.189
+                INFO 
+                [cluster-ClusterId{value='6a2bb276014fc6cff7eba7ff', description='null'}-172.29.97.248:27018]
+                org.mongodb.driver.cluster
+                []
+                - Discovered replica set primary 172.29.97.248:27018 with max election id 7fffffff000000000000003e and max set version 148570
+2026-06-12 14:17:10.312
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Starting ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:10.316
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat started on port 5000 (http) with context path '/'
+2026-06-12 14:17:10.316
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Started JavaDemoApplication in 0.606 seconds (process running for 334.041)
+2026-06-12 14:17:10.320
+                INFO 
+                [restartedMain]
+                o.s.b.d.a.ConditionEvaluationDeltaLoggingListener
+                []
+                - Condition evaluation unchanged
+2026-06-12 14:17:26.057
+                INFO 
+                [File Watcher]
+                o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener
+                []
+                - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-12 14:17:26.057
+                INFO 
+                [Thread-13]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-12 14:17:26.057
+                INFO 
+                [tomcat-shutdown]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Pausing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:26.773
+                INFO 
+                [tomcat-shutdown]
+                o.s.boot.tomcat.GracefulShutdown
+                []
+                - Graceful shutdown complete
+2026-06-12 14:17:26.773
+                INFO 
+                [Thread-13]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Stopping ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:26.854
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Starting JavaDemoApplication using Java 17.0.12 with PID 8084 (C:\Users\Admin\source\repos\java_demo\api\target\classes started by Admin in C:\Users\Admin\source\repos\java_demo)
+2026-06-12 14:17:26.854
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-12 14:17:27.108
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-06-12 14:17:27.116
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2026-06-12 14:17:27.222
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat initialized with port 5000 (http)
+2026-06-12 14:17:27.222
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Initializing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:27.222
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Starting service [Tomcat]
+2026-06-12 14:17:27.222
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardEngine
+                []
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-12 14:17:27.251
+                INFO 
+                [restartedMain]
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                []
+                - Root WebApplicationContext: initialization completed in 397 ms
+2026-06-12 14:17:27.284
+                WARN 
+                [restartedMain]
+                o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext
+                []
+                - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'menuController' defined in file [C:\Users\Admin\source\repos\java_demo\api\target\classes\com\example\java_demo\controller\MenuController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.java_demo.service.interfaces.IMenuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-06-12 14:17:27.284
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Stopping service [Tomcat]
+2026-06-12 14:17:27.284
+                INFO 
+                [restartedMain]
+                o.s.b.a.l.ConditionEvaluationReportLogger
+                []
+                - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-12 14:17:27.314
+                ERROR
+                [restartedMain]
+                o.s.b.d.LoggingFailureAnalysisReporter
+                []
+                - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.java_demo.controller.MenuController required a bean of type 'com.example.java_demo.service.interfaces.IMenuService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.java_demo.service.interfaces.IMenuService' in your configuration.
+
+2026-06-12 14:17:28.828
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - Starting JavaDemoApplication using Java 17.0.12 with PID 8084 (C:\Users\Admin\source\repos\java_demo\api\target\classes started by Admin in C:\Users\Admin\source\repos\java_demo)
+2026-06-12 14:17:28.828
+                INFO 
+                [restartedMain]
+                c.e.java_demo.JavaDemoApplication
+                []
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-12 14:17:29.062
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-06-12 14:17:29.066
+                INFO 
+                [restartedMain]
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                []
+                - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2026-06-12 14:17:29.156
+                INFO 
+                [restartedMain]
+                o.s.boot.tomcat.TomcatWebServer
+                []
+                - Tomcat initialized with port 5000 (http)
+2026-06-12 14:17:29.158
+                INFO 
+                [restartedMain]
+                o.a.coyote.http11.Http11NioProtocol
+                []
+                - Initializing ProtocolHandler ["http-nio-5000"]
+2026-06-12 14:17:29.158
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Starting service [Tomcat]
+2026-06-12 14:17:29.158
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardEngine
+                []
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-12 14:17:29.181
+                INFO 
+                [restartedMain]
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                []
+                - Root WebApplicationContext: initialization completed in 350 ms
+2026-06-12 14:17:29.201
+                WARN 
+                [restartedMain]
+                o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext
+                []
+                - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'menuController' defined in file [C:\Users\Admin\source\repos\java_demo\api\target\classes\com\example\java_demo\controller\MenuController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.java_demo.service.interfaces.IMenuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-06-12 14:17:29.201
+                INFO 
+                [restartedMain]
+                o.a.catalina.core.StandardService
+                []
+                - Stopping service [Tomcat]
+2026-06-12 14:17:29.213
+                INFO 
+                [restartedMain]
+                o.s.b.a.l.ConditionEvaluationReportLogger
+                []
+                - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-12 14:17:29.213
+                ERROR
+                [restartedMain]
+                o.s.b.d.LoggingFailureAnalysisReporter
+                []
+                - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.java_demo.controller.MenuController required a bean of type 'com.example.java_demo.service.interfaces.IMenuService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.java_demo.service.interfaces.IMenuService' in your configuration.
+
