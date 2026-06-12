@@ -2,7 +2,6 @@ package com.example.java_demo.controller;
 
 import com.example.java_demo.model.*;
 import com.example.java_demo.service.interfaces.*;
-import org.slf4j.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

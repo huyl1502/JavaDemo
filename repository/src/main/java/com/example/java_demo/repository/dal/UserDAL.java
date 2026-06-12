@@ -3,7 +3,6 @@ package com.example.java_demo.repository.dal;
 import com.example.java_demo.model.UserModel;
 import com.example.java_demo.repository.interfaces.*;
 import com.mongodb.client.*;
-import org.bson.*;
 
 public class UserDAL implements IUserDAL {
     private final MongoCollection<UserModel> _collection;
