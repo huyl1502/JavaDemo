@@ -22,4 +22,13 @@ public class DependencyInjectionConfig {
     public IUserService userService(IUserDAL userDAL) {
         return new UserService(userDAL);
     }
+
+    @Bean
+    public IMenuDAL menuDAL(MongoDatabase database) {
+        return new MenuDAL(database);
+    }
+    @Bean
+    public IMenuService menuService(IMenuDAL menuDAL) {
+        return new MenuService(menuDAL);
+    }
 }
