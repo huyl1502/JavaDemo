@@ -1,14 +1,14 @@
 package com.example.java_demo.service.bus;
 
-import com.example.java_demo.model.SystemConfig.MenuModel;
-import com.example.java_demo.repository.interfaces.IMenuDAL;
-import com.example.java_demo.service.interfaces.IMenuService;
-import java.util.List;
+import com.example.java_demo.model.SystemConfig.*;
+import com.example.java_demo.repository.interfaces.*;
+import com.example.java_demo.service.interfaces.*;
+import java.util.*;
 
 public class MenuService implements IMenuService {
     private final IMenuDAL _menuDAL;
-    
-    public MenuService(IMenuDAL menuDAL){
+
+    public MenuService(IMenuDAL menuDAL) {
         _menuDAL = menuDAL;
     }
 
@@ -34,6 +34,11 @@ public class MenuService implements IMenuService {
 
     @Override
     public List<MenuModel> getAll() {
+        return _menuDAL.getAll();
+    }
+
+    @Override
+    public List<MenuModel> getMenuUser(String userId) {
         return _menuDAL.getAll();
     }
 }

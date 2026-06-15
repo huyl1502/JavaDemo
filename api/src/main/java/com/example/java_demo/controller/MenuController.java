@@ -1,5 +1,6 @@
 package com.example.java_demo.controller;
 
+import com.example.java_demo.config.SecurityUtils;
 import com.example.java_demo.model.SystemConfig.MenuModel;
 import com.example.java_demo.service.interfaces.IMenuService;
 import org.springframework.web.bind.annotation.*;
@@ -37,5 +38,11 @@ public class MenuController {
     @GetMapping("GetAllMenus")
     public List<MenuModel> getAll() {
         return _menuService.getAll();
+    }
+
+    @GetMapping("GetMenuUser")
+    public List<MenuModel> getMenuUser() {
+        String userId = SecurityUtils.getCurrentUserId();
+        return _menuService.getMenuUser(userId);
     }
 }
