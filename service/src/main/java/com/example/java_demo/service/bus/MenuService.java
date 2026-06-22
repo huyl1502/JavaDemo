@@ -39,6 +39,29 @@ public class MenuService implements IMenuService {
 
     @Override
     public List<MenuModel> getMenuUser(String userId) {
-        return _menuDAL.getAll();
+        List<MenuModel> allMenus = _menuDAL.getAll();
+
+        // Group menu theo ParentMenuId
+        Map<String, List<MenuModel>> groupByParent = new HashMap<>();
+        for (MenuModel menu : allMenus) {
+            String parentId = menu.getParentMenuId() != null ? menu.getParentMenuId() : "";
+            groupByParent.computeIfAbsent(parentId, k -> new ArrayList<>()).add(menu);
+        }
+
+        // Gán children cho từng node, null nếu không có con
+        for (MenuModel menu : allMenus) {
+            List<MenuModel> children = groupByParent.get(menu.getMenuId());
+            menu.setChildren(children != null && !children.isEmpty() ? children : null);
+        }
+
+        // Trả về các node gốc (ParentMenuId null hoặc rỗng)
+        List<MenuModel> rootMenus = new ArrayList<>();
+        for (MenuModel menu : allMenus) {
+            String parentId = menu.getParentMenuId();
+            if (parentId == null || parentId.isEmpty()) {
+                rootMenus.add(menu);
+            }
+        }
+        return rootMenus;
     }
 }
