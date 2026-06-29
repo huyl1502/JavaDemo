@@ -31,4 +31,46 @@ public class DependencyInjectionConfig {
     public IMenuService menuService(IMenuDAL menuDAL) {
         return new MenuService(menuDAL);
     }
+
+    @Bean
+    public IFunctionDAL functionDAL(MongoDatabase database) {
+        return new FunctionDAL(database);
+    }
+    @Bean
+    public IFunctionService functionService(IFunctionDAL functionDAL) {
+        return new FunctionService(functionDAL);
+    }
+
+    @Bean
+    public IFeatureDAL featureDAL(MongoDatabase database) {
+        return new FeatureDAL(database);
+    }
+    @Bean
+    public IFeatureService featureService(IFeatureDAL featureDAL) {
+        return new FeatureService(featureDAL);
+    }
+
+    @Bean
+    public IRoleDAL roleDAL(MongoDatabase database) {
+        return new RoleDAL(database);
+    }
+    @Bean
+    public IRoleService roleService(IRoleDAL roleDAL) {
+        return new RoleService(roleDAL);
+    }
+
+    @Bean
+    public ICacheService redisCacheService(org.springframework.data.redis.core.RedisTemplate<String, Object> redisTemplate) {
+        return new RedisCacheService(redisTemplate);
+    }
+
+    @Bean
+    public CacheFactory cacheFactory(ICacheService redisCacheService) {
+        return new CacheFactory(redisCacheService);
+    }
+
+    @Bean
+    public PermissionAspect permissionAspect(CacheFactory cacheFactory) {
+        return new PermissionAspect(cacheFactory);
+    }
 }

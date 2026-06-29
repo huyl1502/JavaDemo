@@ -1,0 +1,12 @@
+- [x] Add dependencies to Maven pom files (AOP, Redis)
+- [x] Update application.yml with Redis connection settings
+- [x] Create Cache interface `ICacheService`
+- [x] Create Redis cache implementation `RedisCacheService`
+- [x] Create `CacheFactory`
+- [x] Create `RedisConfig` in `api` module config package
+- [x] Create `@HasPermission` custom annotation
+- [x] Create `PermissionAspect` for AOP interception
+- [x] Register new beans in `DependencyInjectionConfig`
+- [x] Add `AccessDeniedException` handling to `ExceptionHandleConfig`
+- [x] Update `TestController` to add test endpoints
+- [x] Verify compilation and test functionality

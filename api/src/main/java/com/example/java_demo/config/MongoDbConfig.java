@@ -10,7 +10,7 @@ import static org.bson.codecs.configuration.CodecRegistries.*;
 
 @Configuration
 public class MongoDbConfig {
-    @Value("${spring.data.mongodb.uri}")
+    @Value("${spring.mongodb.uri}")
     private String uri;
 
     @Bean

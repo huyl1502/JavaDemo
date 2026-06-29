@@ -6,6 +6,9 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://172.29.97.248:9000/realms/test-realm
+  mongodb:
+    uri: mongodb://huylq:h150201H@172.29.97.248:27017,172.29.97.248:27018,172.29.97.248:27019/java_demo?replicaSet=rs0&authSource=admin&retryWrites=true&w=majority
   data:
-    mongodb:
-      uri: mongodb://huylq:h150201H@172.29.97.248:27017,172.29.97.248:27018,172.29.97.248:27019/java_demo?replicaSet=rs0&authSource=admin&retryWrites=true&w=majority
+    redis:
+      host: 172.29.97.248
+      port: 6379
