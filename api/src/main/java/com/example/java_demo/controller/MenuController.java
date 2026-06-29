@@ -3,6 +3,7 @@ package com.example.java_demo.controller;
 import com.example.java_demo.config.SecurityUtils;
 import com.example.java_demo.model.SystemConfig.MenuModel;
 import com.example.java_demo.service.interfaces.IMenuService;
+import com.example.java_demo.model.common.*;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -38,6 +39,11 @@ public class MenuController {
     @GetMapping("GetAllMenus")
     public List<MenuModel> getAll() {
         return _menuService.getAll();
+    }
+
+    @GetMapping("GetMenusPaged")
+    public PagedResponse<MenuModel> getMenusPaged(PagedRequest<?> request) {
+        return _menuService.getAll(request);
     }
 
     @GetMapping("GetMenuUser")

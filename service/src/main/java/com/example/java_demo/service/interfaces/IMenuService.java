@@ -1,6 +1,8 @@
 package com.example.java_demo.service.interfaces;
 
 import com.example.java_demo.model.SystemConfig.MenuModel;
+import com.example.java_demo.model.common.PagedRequest;
+import com.example.java_demo.model.common.PagedResponse;
 import java.util.List;
 
 public interface IMenuService {
@@ -14,5 +16,8 @@ public interface IMenuService {
 
     List<MenuModel> getAll();
 
+    PagedResponse<MenuModel> getAll(PagedRequest<?> request);
+
     List<MenuModel> getMenuUser(String userId);
 }
+

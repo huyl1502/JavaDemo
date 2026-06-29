@@ -1,7 +1,10 @@
 package com.example.java_demo.repository.dal;
 
 import com.example.java_demo.model.SystemConfig.MenuModel;
+import com.example.java_demo.model.common.PagedRequest;
+import com.example.java_demo.model.common.PagedResponse;
 import com.example.java_demo.repository.interfaces.IMenuDAL;
+import com.example.java_demo.repository.utils.MongoPageUtils;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.eq;
@@ -43,4 +46,10 @@ public class MenuDAL implements IMenuDAL {
     public List<MenuModel> getAll() {
         return _collection.find().into(new ArrayList<>());
     }
+
+    @Override
+    public PagedResponse<MenuModel> getAll(PagedRequest<?> request) {
+        return MongoPageUtils.paginate(_collection, null, request);
+    }
 }
+

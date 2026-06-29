@@ -1,6 +1,8 @@
 package com.example.java_demo.service.bus;
 
 import com.example.java_demo.model.SystemConfig.*;
+import com.example.java_demo.model.common.PagedRequest;
+import com.example.java_demo.model.common.PagedResponse;
 import com.example.java_demo.repository.interfaces.*;
 import com.example.java_demo.service.interfaces.*;
 import java.util.*;
@@ -35,6 +37,11 @@ public class MenuService implements IMenuService {
     @Override
     public List<MenuModel> getAll() {
         return _menuDAL.getAll();
+    }
+
+    @Override
+    public PagedResponse<MenuModel> getAll(PagedRequest<?> request) {
+        return _menuDAL.getAll(request);
     }
 
     @Override
