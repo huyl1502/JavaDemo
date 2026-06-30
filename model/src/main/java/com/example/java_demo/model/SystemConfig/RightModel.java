@@ -7,10 +7,11 @@ import org.bson.types.ObjectId;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FunctionModel {
+public class RightModel {
     @BsonId
     private ObjectId id;
+    private String RightId;
+    private String RoleId;
+    private String FeatureId;
     private String FunctionId;
-    private String FunctionName;
-    private boolean Enabled;
 }

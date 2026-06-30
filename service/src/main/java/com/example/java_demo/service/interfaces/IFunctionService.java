@@ -12,5 +12,4 @@ public interface IFunctionService {
     FunctionModel getById(String functionId);
     List<FunctionModel> getAll();
     PagedResponse<FunctionModel> getAll(PagedRequest<?> request);
-    List<FunctionModel> getFunctionTree();
 }

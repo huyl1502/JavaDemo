@@ -60,6 +60,15 @@ public class DependencyInjectionConfig {
     }
 
     @Bean
+    public IRightDAL rightDAL(MongoDatabase database) {
+        return new RightDAL(database);
+    }
+    @Bean
+    public IRightService rightService(IRightDAL rightDAL) {
+        return new RightService(rightDAL);
+    }
+
+    @Bean
     public ICacheService redisCacheService(org.springframework.data.redis.core.RedisTemplate<String, Object> redisTemplate) {
         return new RedisCacheService(redisTemplate);
     }

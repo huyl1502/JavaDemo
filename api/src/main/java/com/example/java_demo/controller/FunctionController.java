@@ -44,9 +44,4 @@ public class FunctionController {
     public PagedResponse<FunctionModel> getFunctionsPaged(PagedRequest<?> request) {
         return _functionService.getAll(request);
     }
-
-    @GetMapping("GetFunctionTree")
-    public List<FunctionModel> getFunctionTree() {
-        return _functionService.getFunctionTree();
-    }
 }
