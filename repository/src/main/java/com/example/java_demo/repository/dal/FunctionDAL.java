@@ -27,19 +27,19 @@ public class FunctionDAL implements IFunctionDAL {
 
     @Override
     public boolean update(FunctionModel function) {
-        var result = _collection.replaceOne(eq("FunctionId", function.getFunctionId()), function);
+        var result = _collection.replaceOne(eq("functionId", function.getFunctionId()), function);
         return result.getModifiedCount() > 0;
     }
 
     @Override
     public boolean delete(String functionId) {
-        var result = _collection.deleteOne(eq("FunctionId", functionId));
+        var result = _collection.deleteOne(eq("functionId", functionId));
         return result.getDeletedCount() > 0;
     }
 
     @Override
     public FunctionModel getById(String functionId) {
-        return _collection.find(eq("FunctionId", functionId)).first();
+        return _collection.find(eq("functionId", functionId)).first();
     }
 
     @Override

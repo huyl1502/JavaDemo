@@ -27,19 +27,19 @@ public class RoleDAL implements IRoleDAL {
 
     @Override
     public boolean update(RoleModel role) {
-        var result = _collection.replaceOne(eq("RoleId", role.getRoleId()), role);
+        var result = _collection.replaceOne(eq("roleId", role.getRoleId()), role);
         return result.getModifiedCount() > 0;
     }
 
     @Override
     public boolean delete(String roleId) {
-        var result = _collection.deleteOne(eq("RoleId", roleId));
+        var result = _collection.deleteOne(eq("roleId", roleId));
         return result.getDeletedCount() > 0;
     }
 
     @Override
     public RoleModel getById(String roleId) {
-        return _collection.find(eq("RoleId", roleId)).first();
+        return _collection.find(eq("roleId", roleId)).first();
     }
 
     @Override

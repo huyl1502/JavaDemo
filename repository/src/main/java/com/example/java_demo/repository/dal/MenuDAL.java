@@ -27,19 +27,19 @@ public class MenuDAL implements IMenuDAL {
 
     @Override
     public boolean update(MenuModel menu) {
-        var result = _collection.replaceOne(eq("MenuId", menu.getMenuId()), menu);
+        var result = _collection.replaceOne(eq("menuId", menu.getMenuId()), menu);
         return result.getModifiedCount() > 0;
     }
 
     @Override
     public boolean delete(String menuId) {
-        var result = _collection.deleteOne(eq("MenuId", menuId));
+        var result = _collection.deleteOne(eq("menuId", menuId));
         return result.getDeletedCount() > 0;
     }
 
     @Override
     public MenuModel getById(String menuId) {
-        return _collection.find(eq("MenuId", menuId)).first();
+        return _collection.find(eq("menuId", menuId)).first();
     }
 
     @Override
@@ -52,4 +52,3 @@ public class MenuDAL implements IMenuDAL {
         return MongoPageUtils.paginate(_collection, null, request);
     }
 }
-

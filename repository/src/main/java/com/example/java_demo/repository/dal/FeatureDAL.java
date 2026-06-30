@@ -27,19 +27,19 @@ public class FeatureDAL implements IFeatureDAL {
 
     @Override
     public boolean update(FeatureModel feature) {
-        var result = _collection.replaceOne(eq("FeatureId", feature.getFeatureId()), feature);
+        var result = _collection.replaceOne(eq("featureId", feature.getFeatureId()), feature);
         return result.getModifiedCount() > 0;
     }
 
     @Override
     public boolean delete(String featureId) {
-        var result = _collection.deleteOne(eq("FeatureId", featureId));
+        var result = _collection.deleteOne(eq("featureId", featureId));
         return result.getDeletedCount() > 0;
     }
 
     @Override
     public FeatureModel getById(String featureId) {
-        return _collection.find(eq("FeatureId", featureId)).first();
+        return _collection.find(eq("featureId", featureId)).first();
     }
 
     @Override
