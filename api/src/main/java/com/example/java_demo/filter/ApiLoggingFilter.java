@@ -54,24 +54,39 @@ public class ApiLoggingFilter extends OncePerRequestFilter {
                 new ContentCachingResponseWrapper(response);
 
         try {
-
             filterChain.doFilter(req, resp);
-
         } finally {
+            if (request.isAsyncStarted()) {
+                request.getAsyncContext().addListener(new AsyncListener() {
+                    @Override
+                    public void onComplete(AsyncEvent event) throws IOException {
+                        long duration = System.currentTimeMillis() - start;
+                        try {
+                            logRequestResponse(req, resp, duration);
+                        } catch (Exception ex) {
+                            log.error("Error while logging api", ex);
+                        }
+                        resp.copyBodyToResponse();
+                    }
 
-            long duration = System.currentTimeMillis() - start;
+                    @Override
+                    public void onTimeout(AsyncEvent event) throws IOException {}
 
-            try {
+                    @Override
+                    public void onError(AsyncEvent event) throws IOException {}
 
-                logRequestResponse(req, resp, duration);
-
-            } catch (Exception ex) {
-
-                log.error("Error while logging api", ex);
-
+                    @Override
+                    public void onStartAsync(AsyncEvent event) throws IOException {}
+                });
+            } else {
+                long duration = System.currentTimeMillis() - start;
+                try {
+                    logRequestResponse(req, resp, duration);
+                } catch (Exception ex) {
+                    log.error("Error while logging api", ex);
+                }
+                resp.copyBodyToResponse();
             }
-
-            resp.copyBodyToResponse();
         }
     }
 

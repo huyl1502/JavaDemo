@@ -3,6 +3,8 @@ package com.example.java_demo.repository.dal;
 import com.example.java_demo.model.UserModel;
 import com.example.java_demo.repository.interfaces.*;
 import com.mongodb.client.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAL implements IUserDAL {
     private final MongoCollection<UserModel> _collection;
@@ -16,5 +18,10 @@ public class UserDAL implements IUserDAL {
     public boolean insert(UserModel user) {
         _collection.insertOne(user);
         return true;
+    }
+
+    @Override
+    public List<UserModel> getAll() {
+        return _collection.find().into(new ArrayList<>());
     }
 }

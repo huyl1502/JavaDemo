@@ -2,17 +2,28 @@ package com.example.java_demo.controller;
 
 import com.example.java_demo.model.SystemConfig.RightModel;
 import com.example.java_demo.service.interfaces.IRightService;
+import com.example.java_demo.service.interfaces.ISetupFormService;
 import com.example.java_demo.model.common.*;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/right")
 public class RightController {
     private final IRightService _rightService;
+    private final ISetupFormService _setupFormService;
 
-    public RightController(IRightService rightService) {
+    public RightController(IRightService rightService, ISetupFormService setupFormService) {
         _rightService = rightService;
+        _setupFormService = setupFormService;
+    }
+
+    @PostMapping("SetupForm")
+    public CompletableFuture<SetupFormInfo> setupForm() {
+        SetupFormFilter filter = new SetupFormFilter();
+        filter.catalogs = List.of(CatalogSetupForm.ROLE, CatalogSetupForm.FEATURE, CatalogSetupForm.FUNCTION);
+        return _setupFormService.setupForm(filter);
     }
 
     @PostMapping("InsertRight")

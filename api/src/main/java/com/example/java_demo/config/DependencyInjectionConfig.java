@@ -82,4 +82,15 @@ public class DependencyInjectionConfig {
     public PermissionAspect permissionAspect(CacheFactory cacheFactory) {
         return new PermissionAspect(cacheFactory);
     }
+
+    @Bean
+    public ISetupFormService setupFormService(
+            IRoleService roleService,
+            IFeatureService featureService,
+            IFunctionService functionService,
+            IMenuService menuService,
+            IRightService rightService,
+            IUserService userService) {
+        return new SetupFormService(roleService, featureService, functionService, menuService, rightService, userService);
+    }
 }
